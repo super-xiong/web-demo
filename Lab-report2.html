@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: pink;
+        }
+        .photoWall {
+            border-radius: 8px;
+            padding: 0;
+            margin: auto;
+            height: 638px;
+            width: 641px;
+            background-color: yellow;
+            list-style-type: none;
+            /*position: absolute;*/
+        }
+        .photoWall li {
+            display: inline-block;
+            height: 200px;
+            width: 200px;
+            /*background-color: red;*/
+            margin-left: 10px;
+            margin-top: 10px;
+            float: left;
+            border-radius: 5px;
+        }
+        .photoWall li img{
+            width:100%;
+            height: 100%;
+            border-radius: 5px;
+            box-shadow: 1px 10px 5px #666;
+        }
+        .img1 {
+            height: 200px;
+            width: 200px;
+            border-radius: 5px;
+            position: absolute;
+            left: 300px;
+            top: 250px;
+            border: 5px solid skyblue;
+            transform: rotate(40deg);
+            box-shadow: 1px 10px 5px #666;
+        }
+        .img2 {
+            height: 200px;
+            width: 200px;
+            border-radius: 5px;
+            position: absolute;
+            left: 700px;
+            top: 450px;
+            border: 5px solid orange;
+            /*transform: rotate(40deg);*/
+            transform: rotate(-25deg);
+            box-shadow: 1px 10px 5px #666;
+        }
+        .img1:hover {
+            transform: scale(1.5, 1.5);
+            z-index: 1;
+        }
+        .img2:hover {
+            transform: scale(1.5, 1.5);
+            z-index: 1;
+        }
+        .photoWall li img:hover{
+            transform: scale(1.5, 1.5);
+            z-index: 99;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;color:deeppink">CSS照片墙</h1>
+    <ul class="photoWall">
+       <li><img src="./image/1.jfif" alt=""></li>
+       <li><img src="./image/2.jfif" alt=""></li>
+       <li><img src="./image/3.jfif" alt=""></li>
+       <li><img src="./image/4.jfif" alt=""></li>
+       <li><img src="./image/5.jfif" alt=""></li>
+       <li><img src="./image/6.jfif" alt=""></li>
+       <li><img src="./image/7.jfif" alt=""></li>
+       <li><img src="./image/8.jfif" alt=""></li>
+       <li><img src="./image/9.jfif" alt=""></li>
+        <img class="img1" src="./image/10.jfif" alt="">
+        <img class="img2" src="./image/11.jfif" alt="">
+    </ul>
+
+</body>
+</html>
