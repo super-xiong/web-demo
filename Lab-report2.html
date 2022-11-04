@@ -18,7 +18,10 @@
             width: 641px;
             background-color: yellow;
             list-style-type: none;
-            /*position: absolute;*/
+            position: absolute;
+            top:50px;
+            left:50%;
+            transform: translate(-50%,10%);
         }
         .photoWall li {
             display: inline-block;
@@ -40,9 +43,9 @@
             height: 200px;
             width: 200px;
             border-radius: 5px;
-            position: absolute;
-            left: 300px;
-            top: 250px;
+            position: relative;
+            left: 450px;
+            top: -300px;
             border: 5px solid skyblue;
             transform: rotate(40deg);
             box-shadow: 1px 10px 5px #666;
@@ -51,9 +54,9 @@
             height: 200px;
             width: 200px;
             border-radius: 5px;
-            position: absolute;
-            left: 700px;
-            top: 450px;
+            position: relative;
+            left: -100px;
+            top: -250px;
             border: 5px solid orange;
             /*transform: rotate(40deg);*/
             transform: rotate(-25deg);
@@ -69,7 +72,7 @@
         }
         .photoWall li img:hover{
             transform: scale(1.5, 1.5);
-            z-index: 99;
+            z-index: 999;
         }
     </style>
 </head>
