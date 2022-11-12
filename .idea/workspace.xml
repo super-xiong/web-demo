@@ -10,7 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10d83fae-9955-4b77-bbc7-77d48e434dbc" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/Lab-report3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +67,9 @@
       <recent name="D:\Github\web-demo\image" />
       <recent name="D:\Github\web-demo" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Github\web-demo" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Lab-report1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web-demo/Lab-report1.html" useBuiltInWebServerPort="true">
@@ -97,6 +104,9 @@
       <workItem from="1667179839098" duration="2176000" />
       <workItem from="1667265291830" duration="44000" />
       <workItem from="1667532797281" duration="4344000" />
+      <workItem from="1667785349441" duration="2804000" />
+      <workItem from="1667870126462" duration="12000" />
+      <workItem from="1668224294431" duration="1767000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js学习</title>
+</head>
+<body>
+    <p id="dome"></p>
+    <p id="test"></p>
+<button onclick="display()">点击出现文字</button>
+<button id="btn">清空上面文字</button>
+</body>
+<script>
+    let time = document.querySelector('#test');
+    var T,q;
+    function display(){
+
+        console.log('点击按钮了')
+        document.querySelector('#dome').innerHTML = '我是大帅哥'
+        time.innerHTML = Date();
+         T = setInterval(function(){  //定时器 我每秒钟更新一次时间
+            time.innerHTML = Date();
+        },1000)
+        q = setTimeout(function(){
+            document.querySelector('#dome').innerHTML = '我是超级大帅哥'
+        },2000)
+
+    };
+    let p = document.querySelector('#dome');
+    let btn = document.querySelector('#btn');
+    btn.addEventListener('click',function(){
+        p.innerHTML = ''
+        time.innerHTML = ''
+        clearInterval(T);
+        clearInterval(q);
+    })
+
+</script>
+</html>
