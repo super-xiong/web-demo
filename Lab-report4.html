@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电子时钟</title>
+</head>
+<style>
+    h1{
+        width: 500px;
+        height: 100px;
+        margin: 300px auto;
+        color: pink;
+    }
+</style>
+<body>
+<h1></h1>
+<script>
+    var myDate = new Date();
+    var tYear = myDate.getFullYear();
+    var tMonth = myDate.getMonth();
+    var tDay = myDate.getDate();
+    var tHours = myDate.getHours();
+    var tMinutes = myDate.getMinutes();
+    var tSecond = myDate.getSeconds();
+    var tWeek = myDate.getDay();
+    let str="";
+    str = tYear + "年" + tMonth +"月" +tDay + "日" +"&nbsp;&nbsp;"+ tHours + ":" + tMinutes + ":" + tSecond + "&nbsp;&nbsp;" +"星期"+tWeek ;
+    let h1 = document.querySelector('h1');
+    h1.innerHTML = str;
+
+    setInterval(function(){
+        myDate = new Date();
+        tYear = myDate.getFullYear();
+         tMonth = myDate.getMonth();
+         tDay = myDate.getDate();
+        tHours = myDate.getHours();
+         tMinutes = myDate.getMinutes();
+         tSecond = myDate.getSeconds();
+        tWeek = myDate.getDay();
+        str = tYear + "年" + tMonth +"月" +tDay + "日" +"&nbsp;&nbsp;"+ tHours + ":" + tMinutes + ":" + tSecond + "&nbsp;&nbsp;" +"星期"+tWeek ;
+        h1.innerHTML = str;
+    },1000)
+</script>
+</body>
+</html>

@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <title>js学习</title>
 </head>
+<style>
+    div {
+        height: 200px;
+        width: 200px;
+        background-color: pink;
+    }
+</style>
 <body>
     <p id="dome"></p>
     <p id="test"></p>
 <button onclick="display()">点击出现文字</button>
 <button id="btn">清空上面文字</button>
+<div></div>
 </body>
 <script>
     let time = document.querySelector('#test');
@@ -33,7 +41,14 @@
         time.innerHTML = ''
         clearInterval(T);
         clearInterval(q);
+    });
+    let div = document.querySelector('div');
+    div.addEventListener('mouseover',function(){
+        div.style.display = 'none';
+        div.style.transitionDuration= '2';
     })
-
+    div.addEventListener('mouseleave',function(){
+        div.style.display = 'block';
+    })
 </script>
 </html>
