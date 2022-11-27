@@ -5,12 +5,54 @@
     <title>电子时钟</title>
 </head>
 <style>
-    h1{
-        width: 500px;
-        height: 100px;
-        margin: 300px auto;
-        color: pink;
+    body{
+        background-color: black;
     }
+    h1{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 600px;
+        height: 100px;
+        padding-left: 80px;
+        color: pink;
+        line-height: 100px;
+        border-radius: 50px;
+        text-shadow: 3px 5px 5px #656B79;
+        box-shadow: 3px 5px 5px #656B79;
+        background:linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+        text-transform: uppercase;
+        background-size: 400%;
+        z-index: 1;
+    }
+    h1::before{
+        content: "";
+        position: absolute;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        top: -5px;
+        background:linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+        background-size: 400%;
+        border-radius: 50px;
+        filter: blur(20px);
+        z-index: -1;
+
+    }
+    h1:hover::before{
+        animation: sun 8s infinite;
+    }
+
+    h1:hover{
+        animation: sun 8s infinite;
+    }
+    @keyframes  sun{
+        100%{
+            background-position: -400% 0;
+        }
+    }
+
 </style>
 <body>
 <h1></h1>
@@ -18,11 +60,17 @@
     var myDate = new Date();
     var tYear = myDate.getFullYear();
     var tMonth = myDate.getMonth();
+    tMonth < 10 ? tMonth = "0" + tMonth: 0;
     var tDay = myDate.getDate();
+    tDay < 10 ? tDay = "0" + tDay: 0;
     var tHours = myDate.getHours();
+    tHours < 10 ? tHours = "0" + tHours: 0;
     var tMinutes = myDate.getMinutes();
+    tMinutes < 10 ? tMinutes = "0" + tMinutes: 0;
     var tSecond = myDate.getSeconds();
+    tSecond < 10 ? tSecond = "0" + tSecond: 0;
     var tWeek = myDate.getDay();
+    tWeek === 0 ? tWeek = "日" : 0;
     let str="";
     str = tYear + "年" + tMonth +"月" +tDay + "日" +"&nbsp;&nbsp;"+ tHours + ":" + tMinutes + ":" + tSecond + "&nbsp;&nbsp;" +"星期"+tWeek ;
     let h1 = document.querySelector('h1');
@@ -31,12 +79,18 @@
     setInterval(function(){
         myDate = new Date();
         tYear = myDate.getFullYear();
-         tMonth = myDate.getMonth();
-         tDay = myDate.getDate();
+        tMonth = myDate.getMonth(   );
+        tMonth < 10 ? tMonth = "0" + tMonth: 0;
+        tDay = myDate.getDate();
+        tDay < 10 ? tDay = "0" + tDay: 0;
         tHours = myDate.getHours();
-         tMinutes = myDate.getMinutes();
-         tSecond = myDate.getSeconds();
+        tHours < 10 ? tHours = "0" + tHours: 0;
+        tMinutes = myDate.getMinutes();
+        tMinutes < 10 ? tMinutes = "0" + tMinutes: 0;
+        tSecond = myDate.getSeconds();
+        tSecond < 10 ? tSecond = "0" + tSecond: 0;
         tWeek = myDate.getDay();
+        tWeek === 0 ? tWeek = "日" : 0;
         str = tYear + "年" + tMonth +"月" +tDay + "日" +"&nbsp;&nbsp;"+ tHours + ":" + tMinutes + ":" + tSecond + "&nbsp;&nbsp;" +"星期"+tWeek ;
         h1.innerHTML = str;
     },1000)
