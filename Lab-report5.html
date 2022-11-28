@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跳动的心</title>
+</head>
+<body>
+<canvas id="canvas" style="height: 100%;width:100%" ></canvas>
+<div style="display:none">
+    <img id="source"
+         src="./image/heartbeat.png"
+         sizes="100%">
+</div>
+
+<script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const image = document.getElementById('source');
+    canvas.style.backgroundColor= 'pink';
+    var a = 1;
+    small();
+    function small(){
+        ctx.clearRect(40,40,100,100);
+        // canvas.style.height='800px';
+
+            ctx.drawImage(image,60,60,50,50);
+
+    }
+    function big(){
+        ctx.clearRect(60,60,50,50);
+        // canvas.style.height='500px';
+
+            ctx.drawImage(image,40,40,100,100);
+
+    }
+    setInterval(function(){
+        if(a%2 === 0)
+        {
+            big();
+        }
+        else{
+            small();
+        }
+        a++;
+    },500)
+
+</script>
+</body>
+</html>
