@@ -1,160 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>第十次作业</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第10次作业</title>
 </head>
 <style>
-    h1 {
-        text-align:center;
-        /*margin-top: 40px;*/
-        border: 2px solid pink;
-        width: 450px;
-        margin: 200px auto 100px ;
-        padding: 10px 15px;
+    div {
+        text-align: center;
+        margin: 40px auto;
+    }
+    input {
+        height: 60px;
+        width: 100px;
         border-radius: 8px;
-    }
-    input  {
-        height: 100px;
-        width: 200px;
-        border-radius: 30px;
-        border: 2px pink solid;
+        border: pink 2px solid;
         background-color: white;
-        margin: 40px 20px;
-
-    }
-    #input1 {
-        margin-left: 540px;
+        font-size: 30px;
+        font-family: 微软雅黑;
+        font-weight: 700;
     }
 </style>
 <body>
-    <h1>Welcome Code Word</h1>
-    <input id="input1" type="button" value="注册">
-    <input id='input2' type="button" value="登录">
-    <script>
-        var input1 = document.querySelector('#input1');
-        var input2 = document.querySelector('#input2');
-        input1.addEventListener('click',function(){
-            var myWindow = window.open('','','width=500,height=500');
-            myWindow.document.write('<form>\n' +
-                '        姓名: <input type="text" placeholder="请输入你的姓名...">\n' +
-                '        <br><br>\n' +
-                '        年龄: <input type="number" placeholder="请输入你的年龄...">\n' +
-                '        <br><br>\n' +
-                '        性别:\n' +
-                '        <label for="nan">男士</label>\n' +
-                '         <input type="radio" name="sex" id="nan">\n' +
-                '        <label for="nv">女士</label>\n' +
-                '         <input type="radio" name="sex" id="nv">\n' +
-                '        <br><br>\n' +
-                '        生日:\n' +
-                '        <select>\n' +
-                '            <option value="">--请选择年份--</option>\n' +
-                '            <option>2005</option>\n' +
-                '            <option>2006</option>\n' +
-                '            <option>2007</option>\n' +
-                '            <option>2008</option>\n' +
-                '            <option>2009</option>\n' +
-                '            <option>2010</option>\n' +
-                '            <option>2011</option>\n' +
-                '            <option>2012</option>\n' +
-                '            <option>2013</option>\n' +
-                '            <option>2014</option>\n' +
-                '            <option>2015</option>\n' +
-                '            <option>2016</option>\n' +
-                '            <option>2017</option>\n' +
-                '            <option>2018</option>\n' +
-                '            <option>2019</option>\n' +
-                '            <option>2020</option>\n' +
-                '        </select>\n' +
-                '        <select>\n' +
-                '            <option value="">--请选择月份--</option>\n' +
-                '            <option>1</option>\n' +
-                '            <option>2</option>\n' +
-                '            <option>3</option>\n' +
-                '            <option>4</option>\n' +
-                '            <option>5</option>\n' +
-                '            <option>6</option>\n' +
-                '            <option>7</option>\n' +
-                '            <option>8</option>\n' +
-                '            <option>9</option>\n' +
-                '            <option>10</option>\n' +
-                '            <option>11</option>\n' +
-                '            <option>12</option>\n' +
-                '        </select>\n' +
-                '        <select>\n' +
-                '            <option value="">--请选择日--</option>\n' +
-                '            <option>1</option>\n' +
-                '            <option>2</option>\n' +
-                '            <option>3</option>\n' +
-                '            <option>4</option>\n' +
-                '            <option>5</option>\n' +
-                '            <option>6</option>\n' +
-                '            <option>7</option>\n' +
-                '            <option>8</option>\n' +
-                '            <option>9</option>\n' +
-                '            <option>10</option>\n' +
-                '            <option>11</option>\n' +
-                '            <option>12</option>\n' +
-                '            <option>13</option>\n' +
-                '            <option>14</option>\n' +
-                '            <option>15</option>\n' +
-                '            <option>16</option>\n' +
-                '            <option>17</option>\n' +
-                '            <option>18</option>\n' +
-                '            <option>19</option>\n' +
-                '            <option>20</option>\n' +
-                '            <option>21</option>\n' +
-                '            <option>22</option>\n' +
-                '            <option>23</option>\n' +
-                '            <option>24</option>\n' +
-                '            <option>25</option>\n' +
-                '            <option>26</option>\n' +
-                '            <option>27</option>\n' +
-                '            <option>28</option>\n' +
-                '            <option>29</option>\n' +
-                '            <option>30</option>\n' +
-                '            <option>31</option>\n' +
-                '        </select>\n' +
-                '        <br><br>\n' +
-                '        爱好:\n' +
-                '\n' +
-                '        <input type="checkbox" id="read">\n' +
-                '        <label for="read">阅读</label>\n' +
-                '\n' +
-                '        <input type="checkbox" id="run">\n' +
-                '        <label for="run">跑步</label>\n' +
-                '\n' +
-                '        <input type="checkbox" id="swim">\n' +
-                '        <label for="swim">游泳</label>\n' +
-                '\n' +
-                '        <input type="checkbox" id="game">\n' +
-                '        <label for="game">打游戏</label>\n' +
-                '        <br><br>\n' +
-                '        个人介绍:\n' +
-                '        <br><br>\n' +
-                '        <textarea cols="50" rows="10" placeholder="请输入你的个人介绍......"></textarea>\n' +
-                '        <br><br>\n' +
-                '        <input type="checkbox">我统一信息录入\n' +
-                '        <br><br>\n' +
-                '        <input id ="t1" type="submit" value="立即注册" onclick="window.close()">\n' +
-                '        <input type="reset" value="重新输入">\n' +
-                '    </form>'
-            );
-            myWindow.focus();
-            myWindow.document.body.style.backgroundColor = 'pink';
-        });
-        input2.addEventListener('click',function(){
-            var win = window.open('','','width=500,height=500');
-            win.document.write('姓名: <input type="text" placeholder="请输入你的姓名...">\n' +
-                '        <br><br>\n' +
-                '        密码: <input type="password" placeholder="请输入你的密码...">\n' +
-                '        <br><br>' +
-                '        <input id ="t1" type="submit" value="立即登录" onclick="window.close()">\n'
-            );
-            win.focus();
-            win.document.body.style.backgroundColor='pink';
-        })
-    </script>
+    <div>
+        <h1>这是主页</h1>
+        <input id="input1" type="button" value="注册"> &nbsp;&nbsp;|&nbsp;&nbsp; <input id="input2" type="button" value="登录">
+    </div>
 </body>
+<script>
+    var input1 = document.querySelector('#input1');
+    var input2 = document.querySelector('#input2');
+    input1.addEventListener('click',function(){
+        var win1 = window.open('','','height=300,width=500');
+        win1.onload = function(){
+            win1.document.title="用户登录";
+        };
+        win1.document.write('用户名:  <input type="text" placeholder="请输入你的姓名...">\n' +
+            '        <br><br>\n' +
+            '        密码: <input type="password" placeholder="请输入你的密码...">\n' +
+            '        <br><br>' +
+            '        <input id ="t1" type="submit" value="立即注册" onclick="window.close()">\n');
+        win1.focus();
+    })
+    input2.addEventListener('click',function(){
+        const win2 = window.open('','','height=300,width=500');
+        win2.document.write('<h1>游客，你好！</h1>'+
+            '用户名:  <input type="text" placeholder="请输入你的姓名...">\n' +
+            '        <br><br>\n' +
+            '        密码: <input type="password" placeholder="请输入你的密码...">\n' +
+            '        <br><br>' +
+            '        <input id ="t1" type="submit" value="立即登录" onclick="window.close()">\n');
+        win2.focus();
+    })
+</script>
 </html>
