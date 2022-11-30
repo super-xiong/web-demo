@@ -31,15 +31,44 @@
     <h1>Welcome Code Word</h1>
     <input id="input1" type="button" value="注册">
     <input id='input2' type="button" value="登录">
+<!--    <script>-->
+<!--        var psword ;-->
+<!--        var mz = document.querySelector('#mz');-->
+<!--        var mi1 = document.querySelector('#mi1');-->
+<!--        var mi2 = document.querySelector('#mi2');-->
+<!--        mi1.addEventListener('blur',function(){-->
+<!--            if(mi1.value.length<6)-->
+<!--            {-->
+<!--                alert("密码必须大于6位!");-->
+<!--            }else-->
+<!--            {-->
+<!--                psword = mi1.value;-->
+<!--            }-->
+<!--        })-->
+<!--        mi2.addEventListener('blur',function(){-->
+<!--            if(psword != mi2.value)-->
+<!--            {-->
+<!--                alert("两次密码必须相同！");-->
+<!--            }-->
+<!--        })-->
+<!--        mz.addEventListener('blur',function(){-->
+<!--            if(mz.value ===""){-->
+<!--                alert("名字不能为空");-->
+<!--            }-->
+<!--        })-->
+<!--    </script>-->
     <script>
         var input1 = document.querySelector('#input1');
         var input2 = document.querySelector('#input2');
         input1.addEventListener('click',function(){
             var myWindow = window.open('','','width=500,height=500');
+
             myWindow.document.write('<form>\n' +
-                '        姓名: <input type="text" placeholder="请输入你的姓名...">\n' +
+                '        姓名: <input id="mz" type="text" placeholder="请输入你的姓名...">\n' +
                 '        <br><br>\n' +
-                '        年龄: <input type="number" placeholder="请输入你的年龄...">\n' +
+                '        密码: <input id="mi1" type="password" placeholder="请输入你的密码...">\n' +
+                '        <br><br>\n' +
+                '        确认密码: <input id="mi2" type="password" placeholder="请再次输入你的密码...">\n' +
                 '        <br><br>\n' +
                 '        性别:\n' +
                 '        <label for="nan">男士</label>\n' +
@@ -139,21 +168,62 @@
                 '        <br><br>\n' +
                 '        <input id ="t1" type="submit" value="立即注册" onclick="window.close()">\n' +
                 '        <input type="reset" value="重新输入">\n' +
-                '    </form>'
+                '    </form>\n' +
+                '<script>\n' +
+                '        var psword ;\n' +
+                '        var mz = document.querySelector(\'#mz\');\n' +
+                '        var mi1 = document.querySelector(\'#mi1\');\n' +
+                '        var mi2 = document.querySelector(\'#mi2\');\n' +
+                '        mi1.addEventListener(\'blur\',function(){\n' +
+                '            if(mi1.value.length<6)\n' +
+                '            {\n' +
+                '                alert("密码必须大于6位!");\n' +
+                '            }else\n' +
+                '            {\n' +
+                '                psword = mi1.value;\n' +
+                '            }\n' +
+                '        })\n' +
+                '        mi2.addEventListener(\'blur\',function(){\n' +
+                '            if(psword != mi2.value)\n' +
+                '            {\n' +
+                '                alert("两次密码必须相同！");\n' +
+                '            }\n' +
+                '        })\n' +
+                '        mz.addEventListener(\'blur\',function(){\n' +
+                '            if(mz.value ===""){\n' +
+                '                alert("名字不能为空");\n' +
+                '            }\n' +
+                '        })\n' +
+                '    <\/script>'
             );
+
             myWindow.focus();
             myWindow.document.body.style.backgroundColor = 'pink';
         });
+
         input2.addEventListener('click',function(){
             var win = window.open('','','width=500,height=500');
-            win.document.write('姓名: <input type="text" placeholder="请输入你的姓名...">\n' +
+            win.document.write('姓名: <input id="mz" type="text" placeholder="请输入你的姓名...">\n' +
                 '        <br><br>\n' +
-                '        密码: <input type="password" placeholder="请输入你的密码...">\n' +
+                '        密码: <input id="mm" type="password" placeholder="请输入你的密码...">\n' +
                 '        <br><br>' +
-                '        <input id ="t1" type="submit" value="立即登录" onclick="window.close()">\n'
+                '        <input id ="t1" type="submit" value="立即登录" onclick="window.close()">\n' +
+                '        <script>var ps = document.querySelector(\'#mm\');\n' +
+                'var mz = document.querySelector(\'#mz\');\n' +
+                'mz.addEventListener(\'blur\',function(){\n' +
+                '    if(mz.value ==="")\n' +
+                '    alert("不能为空");\n' +
+                '})\n' +
+                'ps.addEventListener(\'blur\',function(){\n' +
+                '                if(ps.value.length<6){\n' +
+                '                    alert("密码必须大于6位！");\n' +
+                '                }\n' +
+                '            })\n'+
+                '<\/script>'
             );
             win.focus();
             win.document.body.style.backgroundColor='pink';
+
         })
     </script>
 </body>
